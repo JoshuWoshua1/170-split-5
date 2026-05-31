@@ -3,24 +3,32 @@ using UnityEngine.UI;
 
 public class TelegraphTesting : MonoBehaviour
 {
-    [SerializeField] private Button spawnTelegraph;
-    [SerializeField] private Telegraph telegraphPrefab;
+    [SerializeField] private Button[] telegraphButtons;
+    [SerializeField] private Telegraph[] telegraphPrefabs;
     //[SerializeField] private TelegraphSpawnRequest telegraphRequest;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (spawnTelegraph != null)
+        if (telegraphButtons != null)
         {
-            spawnTelegraph.onClick.AddListener(SpawnTelegraph);
+            for (int i = 0; i < telegraphButtons.Length; i++)
+            {
+                int index = i; // Capture the current index for the lambda
+                telegraphButtons[i].onClick.AddListener(() => SpawnTelegraph(index));
+            }
         }
     }
 
     private void OnDestroy()
     {
-        if (spawnTelegraph != null)
+        if (telegraphButtons != null)
         {
-            spawnTelegraph.onClick.RemoveListener(SpawnTelegraph);
+            for (int i = 0; i < telegraphButtons.Length; i++)
+            {
+                int index = i; // Capture the current index for the lambda
+                telegraphButtons[i].onClick.RemoveListener(() => SpawnTelegraph(index));
+            }
         }
     }
 
@@ -30,15 +38,15 @@ public class TelegraphTesting : MonoBehaviour
         
     }
 
-    private void SpawnTelegraph()
+    private void SpawnTelegraph(int index)
     {
-        if (telegraphPrefab == null)
+        if (telegraphPrefabs == null || index < 0 || index >= telegraphPrefabs.Length)
         {
-            Debug.LogWarning("TelegraphTesting: telegraphPrefab is not assigned.");
+            Debug.LogWarning("TelegraphTesting: telegraphPrefab is not assigned or index is out of range.");
             return;
         }
 
         Vector3 spawnPosition = TempPlayer.Instance.transform.position;
-        Instantiate(telegraphPrefab, spawnPosition, Quaternion.identity);
+        Instantiate(telegraphPrefabs[index], spawnPosition, Quaternion.identity);
     }
 }

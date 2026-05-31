@@ -9,6 +9,7 @@ public class Telegraph : MonoBehaviour
     // do nothing, snapshot player location upon the end of telegraph duration and apply damage if player is within collider bounds at that moment
     [SerializeField] private ParticleSystem telegraphParticle;
     [SerializeField] private ParticleSystem hitParticle;
+    [SerializeField] private SpriteRenderer telegraphSprite; // shows telegraph area, changed for each telegraph variant
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +28,7 @@ public class Telegraph : MonoBehaviour
         yield return new WaitForSeconds(1f);
         hitParticle.Play();
         SnapshotDamage();
+        telegraphSprite.enabled = false; // hide telegraph area after applying damage
 
         yield return new WaitForSeconds(5f); // allow time for hit particle to play before destroying telegraph object
         Destroy(gameObject);

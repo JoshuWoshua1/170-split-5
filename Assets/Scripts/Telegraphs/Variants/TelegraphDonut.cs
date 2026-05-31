@@ -21,4 +21,12 @@ public class TelegraphDonut : Telegraph
     // 1) Draw donut telegraph visuals
     // 2) Apply selected size mode
     // 3) Trigger optional cascades
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, outerRadius);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, innerRadius);
+    }
 }

@@ -24,4 +24,12 @@ public class TelegraphLine : Telegraph
     [SerializeField] private bool cascades;
     [SerializeField] private float cascadeDelay = 1f;
     [SerializeField] private int cascadeCount = 3;
+
+
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, new Vector3(lineLength, 1f, lineWidth));
+    }
 }
