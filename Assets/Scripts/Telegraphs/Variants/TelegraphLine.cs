@@ -24,6 +24,7 @@ public class TelegraphLine : Telegraph
     [SerializeField] private bool cascades;
     [SerializeField] private float cascadeDelay = 1f;
     [SerializeField] private int cascadeCount = 3;
+    [SerializeField] private float cascadeSizeIncrement = 1f;
 
     protected override bool IsPlayerInTelegraph(Transform playerTransform)
     {

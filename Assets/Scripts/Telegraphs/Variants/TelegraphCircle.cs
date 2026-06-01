@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public enum SizeChangeMode
@@ -6,6 +7,11 @@ public enum SizeChangeMode
     Gradual,
     LastMoment,
     Stepped
+}
+public enum CircleCascadeShape
+{
+    Circle,
+    Donut
 }
 
 public class TelegraphCircle : Telegraph
@@ -28,8 +34,46 @@ public class TelegraphCircle : Telegraph
 
     [Header("Cascading Settings")]
     [SerializeField] private bool cascades;
+    [SerializeField] private CircleCascadeShape cascadeShape;
     [SerializeField] private float cascadeDelay = 1f;
     [SerializeField] private int cascadeCount = 3;
+    [SerializeField] private float cascadeRadiusIncrement = 1f;
+
+    protected override IEnumerator SizeChange()
+    {
+        if (sizeChangeMode == SizeChangeMode.Gradual)
+        {
+            float initialRadius = radius;
+            float elapsed = 0f;
+            while (elapsed < sizeChangeSpeed)
+            {
+                radius = Mathf.Lerp(initialRadius, maxRadius, elapsed / sizeChangeSpeed);
+                elapsed += Time.deltaTime;
+                Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
+                yield return null;
+            }
+            radius = maxRadius; // ensure it ends at max radius
+            Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
+        }
+        else if (sizeChangeMode == SizeChangeMode.LastMoment)
+        {
+            yield return new WaitForSeconds(lastMomentDelay);
+            radius = maxRadius;
+            Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
+        }
+        else if (sizeChangeMode == SizeChangeMode.Stepped)
+        {
+            float stepIncrement = (maxRadius - radius) / stepCount;
+            for (int i = 0; i < stepCount; i++)
+            {
+                radius += stepIncrement;
+                yield return new WaitForSeconds(timeBetweenSteps);
+                Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
+            }
+            radius = maxRadius; // ensure it ends at max radius
+            Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
+        }
+    }
 
     protected override bool IsPlayerInTelegraph(Transform playerTransform)
     {

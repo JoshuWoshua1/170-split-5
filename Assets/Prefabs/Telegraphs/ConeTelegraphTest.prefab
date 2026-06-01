@@ -167,13 +167,13 @@ MonoBehaviour:
   ResolutionFillColor: {r: 0.7176471, g: 0, b: 0, a: 0.34901962}
   radius: 4
   angle: 120
-  sizeChangeMode: 0
-  sizeChangeSpeed: 0
-  maxRadius: 0
-  maxAngle: 0
+  sizeChangeMode: 3
+  sizeChangeSpeed: 3
+  maxRadius: 6
+  maxAngle: 180
   stepCount: 3
-  timeBetweenSteps: 0.15
-  lastMomentDelay: 0.5
+  timeBetweenSteps: 0.75
+  lastMomentDelay: 1
 --- !u!1 &6258147999668681474
 GameObject:
   m_ObjectHideFlags: 0

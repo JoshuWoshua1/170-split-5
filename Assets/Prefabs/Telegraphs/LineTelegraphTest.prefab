@@ -28,7 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.96, y: 0.06, z: -0.48}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7012141097457760320}
   - {fileID: 5429771995357823105}
@@ -64,6 +64,7 @@ MonoBehaviour:
   cascades: 0
   cascadeDelay: 1
   cascadeCount: 3
+  cascadeSizeIncrement: 1
 --- !u!1 &4322147988993982293
 GameObject:
   m_ObjectHideFlags: 0

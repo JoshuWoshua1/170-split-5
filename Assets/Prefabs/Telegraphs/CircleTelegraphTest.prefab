@@ -160,22 +160,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209f617cd9b113242a3ff3526e9939e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TelegraphCircle
-  telegraphDuration: 5
+  telegraphDuration: 2
   damage: 0
   telegraph: {fileID: 8088182837414978095}
   hitParticle: {fileID: 780815585008958339}
   ResolutionColor: {r: 1, g: 0, b: 0, a: 1}
   ResolutionFillColor: {r: 0.7169812, g: 0, b: 0, a: 0.34901962}
   radius: 2
-  sizeChangeMode: 0
-  sizeChangeSpeed: 0
-  maxRadius: 0
+  sizeChangeMode: 1
+  sizeChangeSpeed: 2
+  maxRadius: 4
   stepCount: 3
   timeBetweenSteps: 0.15
   lastMomentDelay: 0.5
   cascades: 0
+  cascadeShape: 0
   cascadeDelay: 1
   cascadeCount: 3
+  cascadeRadiusIncrement: 1
 --- !u!1 &6020674776440986345
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class TelegraphCone : Telegraph
 {
@@ -28,6 +29,54 @@ public class TelegraphCone : Telegraph
     [SerializeField] private float cascadeDelay = 1f;
     [SerializeField] private int cascadeCount = 3;
     */
+
+    protected override IEnumerator SizeChange()
+    {
+        if (sizeChangeMode == SizeChangeMode.Gradual)
+        {
+            float initialAngle = angle;
+            float initialRadius = radius;
+            float elapsed = 0f;
+            while (elapsed < sizeChangeSpeed)
+            {
+                radius = Mathf.Lerp(initialRadius, maxRadius, elapsed / sizeChangeSpeed);
+                angle = Mathf.Lerp(initialAngle, maxAngle, elapsed / sizeChangeSpeed);
+                elapsed += Time.deltaTime;
+                Rescale(Vector3.one * radius);
+                yield return null;
+            }
+            radius = maxRadius; // ensure it ends at max radius
+            angle = maxAngle; // ensure it ends at max angle
+            Rescale(Vector3.one * radius);
+        }
+        else if (sizeChangeMode == SizeChangeMode.LastMoment)
+        {
+            yield return new WaitForSeconds(lastMomentDelay);
+            radius = maxRadius;
+            angle = maxAngle;
+            Rescale(Vector3.one * radius);
+        }
+        else if (sizeChangeMode == SizeChangeMode.Stepped)
+        {
+            float stepIncrement = (maxRadius - radius) / stepCount;
+            for (int i = 0; i < stepCount; i++)
+            {
+                angle += (maxAngle - angle) / stepCount;
+                radius += stepIncrement;
+                yield return new WaitForSeconds(timeBetweenSteps);
+                Rescale(Vector3.one * radius);
+            }
+            angle = maxAngle; // ensure it ends at max angle
+            radius = maxRadius; // ensure it ends at max radius
+            Rescale(Vector3.one * radius);
+        }
+    }
+
+    protected override void Rescale(Vector3 newScale)
+    {
+        transform.localScale = newScale;
+        telegraph.material.SetFloat("_Angle", angle/2f); // Assuming the shader uses _Angle for the cone angle
+    }
 
     protected override bool IsPlayerInTelegraph(Transform playerTransform)
     {

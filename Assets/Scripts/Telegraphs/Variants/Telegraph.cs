@@ -7,8 +7,8 @@ public class Telegraph : MonoBehaviour
     [SerializeField] private int damage;
     //[SerializeField] private Collider telegraphCollider;
     // do nothing, snapshot player location upon the end of telegraph duration and apply damage if player is within collider bounds at that moment
-    [SerializeField] private MeshRenderer telegraph;
-    [SerializeField] private ParticleSystem hitParticle;
+    public MeshRenderer telegraph;
+    public ParticleSystem hitParticle;
     [SerializeField] private Color ResolutionColor;
     [SerializeField] private Color ResolutionFillColor;
     void Start()
@@ -20,6 +20,8 @@ public class Telegraph : MonoBehaviour
     private IEnumerator TelegraphLifecycle()
     {
         Debug.Log("Telegraph started.");
+        StartCoroutine(SizeChange());
+        StartCoroutine(Cascade());
         telegraph.enabled = true;
         
         yield return new WaitForSeconds(telegraphDuration-(telegraphDuration / 2));
@@ -53,6 +55,21 @@ public class Telegraph : MonoBehaviour
         }
         telegraph.material.SetColor("_BaseColor", targetColor); // Ensure it ends on the target color
         telegraph.material.SetColor("_FillColor", targetFillColor); // Ensure it ends on the target fill color
+    }
+
+    protected virtual IEnumerator SizeChange()
+    {
+        yield break; // default does nothing, only used for telegraph variants that change size over time
+    }
+
+    protected virtual IEnumerator Cascade()
+    {
+        yield break; // default does nothing, only used for telegraph variants that have cascading behavior
+    }
+
+    protected virtual void Rescale(Vector3 newScale)
+    {
+        transform.localScale = newScale;
     }
 
     protected virtual bool IsPlayerInTelegraph(Transform playerTransform)

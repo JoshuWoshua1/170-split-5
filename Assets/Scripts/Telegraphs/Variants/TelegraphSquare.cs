@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class TelegraphSquare : Telegraph
 {
@@ -17,6 +18,42 @@ public class TelegraphSquare : Telegraph
     [Header("Last Moment Settings")]
     [SerializeField] private float lastMomentDelay = 0.5f;
     // Ask chat to group these once code is done --------------------------------------------------
+
+    protected override IEnumerator SizeChange()
+    {
+        if (sizeChangeMode == SizeChangeMode.Gradual)
+        {
+            float initialSideLength = sideLength;
+            float elapsed = 0f;
+            while (elapsed < sizeChangeSpeed)
+            {
+                sideLength = Mathf.Lerp(initialSideLength, maxSideLength, elapsed / sizeChangeSpeed);
+                elapsed += Time.deltaTime;
+                Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
+                yield return null;
+            }
+            sideLength = maxSideLength; // ensure it ends at max side length
+            Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
+        }
+        else if (sizeChangeMode == SizeChangeMode.LastMoment)
+        {
+            yield return new WaitForSeconds(lastMomentDelay);
+            sideLength = maxSideLength;
+            Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
+        }
+        else if (sizeChangeMode == SizeChangeMode.Stepped)
+        {
+            float stepIncrement = (maxSideLength - sideLength) / stepCount;
+            for (int i = 0; i < stepCount; i++)
+            {
+                sideLength += stepIncrement;
+                yield return new WaitForSeconds(timeBetweenSteps);
+                Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
+            }
+            sideLength = maxSideLength; // ensure it ends at max side length
+            Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
+        }
+    }
 
     protected override bool IsPlayerInTelegraph(Transform playerTransform)
     {

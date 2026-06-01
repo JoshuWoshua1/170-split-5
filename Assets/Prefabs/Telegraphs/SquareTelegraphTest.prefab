@@ -53,11 +53,11 @@ MonoBehaviour:
   ResolutionColor: {r: 1, g: 0, b: 0, a: 1}
   ResolutionFillColor: {r: 0.7176471, g: 0, b: 0, a: 0.34901962}
   sideLength: 4
-  sizeChangeMode: 0
-  sizeChangeSpeed: 0
-  maxSideLength: 0
+  sizeChangeMode: 2
+  sizeChangeSpeed: 2
+  maxSideLength: 8
   stepCount: 3
-  timeBetweenSteps: 0.15
+  timeBetweenSteps: 0.5
   lastMomentDelay: 0.5
 --- !u!1 &7529146933621441594
 GameObject:
