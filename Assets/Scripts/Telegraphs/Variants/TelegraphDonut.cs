@@ -21,6 +21,11 @@ public class TelegraphDonut : Telegraph
     // 1) Draw donut telegraph visuals
     // 2) Apply selected size mode
     // 3) Trigger optional cascades
+    protected override bool IsPlayerInTelegraph(Transform playerTransform)
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+        return distanceToPlayer >= innerRadius && distanceToPlayer <= outerRadius;
+    }
 
     private void OnDrawGizmosSelected()
     {
