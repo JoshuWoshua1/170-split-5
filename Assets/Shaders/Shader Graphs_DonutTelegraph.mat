@@ -38,7 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _InnerRadius: 0.1999
+    - _InnerRadius: 0.2499
     - _LineThickness: 0.2
     - _OuterRadius: 0.4999
     - _Pixelation: 8

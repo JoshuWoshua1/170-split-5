@@ -4,18 +4,20 @@ using UnityEngine.UI;
 public class TelegraphTesting : MonoBehaviour
 {
     [SerializeField] private Button[] telegraphButtons;
-    [SerializeField] private Telegraph[] telegraphPrefabs;
-    //[SerializeField] private TelegraphSpawnRequest telegraphRequest;
+    [SerializeField] private TelegraphSystem telegraphSystem;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
+        if (telegraphSystem == null)
+        {
+            telegraphSystem = FindFirstObjectByType<TelegraphSystem>();
+        }
+
         if (telegraphButtons != null)
         {
             for (int i = 0; i < telegraphButtons.Length; i++)
             {
-                int index = i; // Capture the current index for the lambda
-                telegraphButtons[i].onClick.AddListener(() => SpawnTelegraph(index));
+                telegraphButtons[i].onClick.AddListener(PlayTelegraphSequence);
             }
         }
     }
@@ -26,27 +28,19 @@ public class TelegraphTesting : MonoBehaviour
         {
             for (int i = 0; i < telegraphButtons.Length; i++)
             {
-                int index = i; // Capture the current index for the lambda
-                telegraphButtons[i].onClick.RemoveListener(() => SpawnTelegraph(index));
+                telegraphButtons[i].onClick.RemoveListener(PlayTelegraphSequence);
             }
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void PlayTelegraphSequence()
     {
-        
-    }
-
-    private void SpawnTelegraph(int index)
-    {
-        if (telegraphPrefabs == null || index < 0 || index >= telegraphPrefabs.Length)
+        if (telegraphSystem == null)
         {
-            Debug.LogWarning("TelegraphTesting: telegraphPrefab is not assigned or index is out of range.");
+            Debug.LogWarning("TelegraphTesting: No TelegraphSystem was assigned or found in the scene.");
             return;
         }
 
-        Vector3 spawnPosition = TempPlayer.Instance.transform.position;
-        Instantiate(telegraphPrefabs[index], spawnPosition, Quaternion.identity);
+        telegraphSystem.PlayTelegraphSequence();
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 public enum TelegraphShapeType
 {
     Circle,
+    Square,
     Donut,
     Line,
     Cone
@@ -37,6 +38,12 @@ public class ConeShapeSettings
 }
 
 [Serializable]
+public class SquareShapeSettings
+{
+    [Min(0f)] public float sideLength = 3f;
+}
+
+[Serializable]
 public class TelegraphShapeSettings
 {
     [Header("Shape Type")]
@@ -44,6 +51,9 @@ public class TelegraphShapeSettings
 
     [Header("Circle")]
     public CircleShapeSettings circle = new CircleShapeSettings();
+
+    [Header("Square")]
+    public SquareShapeSettings square = new SquareShapeSettings();
 
     [Header("Donut")]
     public DonutShapeSettings donut = new DonutShapeSettings();

@@ -4940,13 +4940,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3050da1afb4b54593ee8fce9f360d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TelegraphDonut
-  telegraphDuration: 5
+  telegraphDuration: 3
   damage: 0
   telegraph: {fileID: 8896974513324929648}
   hitParticle: {fileID: 5005868619041943647}
+  InitialColor: {r: 1, g: 0.5529412, b: 0, a: 1}
+  InitialFillColor: {r: 1, g: 0.5019608, b: 0, a: 0.34901962}
   ResolutionColor: {r: 1, g: 0, b: 0, a: 1}
   ResolutionFillColor: {r: 0.7176471, g: 0, b: 0, a: 0.34901962}
-  innerRadius: 1.7
+  innerRadius: 2
   outerRadius: 4
   inOutMode: 0
   delayBetweenInOut: 1

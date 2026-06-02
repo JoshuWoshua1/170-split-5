@@ -19,6 +19,17 @@ public class TelegraphSquare : Telegraph
     [SerializeField] private float lastMomentDelay = 0.5f;
     // Ask chat to group these once code is done --------------------------------------------------
 
+    protected override void ApplyShapeSettings(TelegraphShapeSettings shape)
+    {
+        if (shape == null)
+        {
+            return;
+        }
+
+        sideLength = shape.square.sideLength;
+        Rescale(Vector3.one * sideLength);
+    }
+
     protected override IEnumerator SizeChange()
     {
         if (sizeChangeMode == SizeChangeMode.Gradual)

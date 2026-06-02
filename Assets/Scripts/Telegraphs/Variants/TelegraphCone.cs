@@ -30,6 +30,18 @@ public class TelegraphCone : Telegraph
     [SerializeField] private int cascadeCount = 3;
     */
 
+    protected override void ApplyShapeSettings(TelegraphShapeSettings shape)
+    {
+        if (shape == null)
+        {
+            return;
+        }
+
+        radius = shape.cone.radius;
+        angle = shape.cone.angle;
+        Rescale(Vector3.one * radius);
+    }
+
     protected override IEnumerator SizeChange()
     {
         if (sizeChangeMode == SizeChangeMode.Gradual)

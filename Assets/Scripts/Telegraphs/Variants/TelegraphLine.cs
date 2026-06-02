@@ -30,14 +30,35 @@ public class TelegraphLine : Telegraph
     {
         float halfLength = lineLength / 2f;
         float halfWidth = lineWidth / 2f;
-        Vector3 localPlayerPos = playerTransform.position - transform.position;
+        Vector3 toPlayer = playerTransform.position - transform.position;
+        Vector3 localPlayerPos = Quaternion.Inverse(transform.rotation) * toPlayer;
         return localPlayerPos.x >= -halfLength && localPlayerPos.x <= halfLength &&
                localPlayerPos.z >= -halfWidth && localPlayerPos.z <= halfWidth;
     }
 
-    private void OnDrawGizmosSelected()
+    protected override void ApplyShapeSettings(TelegraphShapeSettings shape)
     {
+        if (shape == null)
+        {
+            return;
+        }
+
+        lineLength = shape.line.length;
+        lineWidth = shape.line.width;
+        Rescale(new Vector3(lineLength/2, 1f, lineWidth*2));
+    }
+
+    protected override void Rescale(Vector3 newScale)
+    {
+        transform.localScale = newScale;
+    }
+
+    private void OnDrawGizmosSelected()
+    {   
+        Matrix4x4 oldMatrix = Gizmos.matrix;
+        Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, new Vector3(lineLength, 1f, lineWidth));
+        Gizmos.DrawWireCube(Vector3.zero, new Vector3(lineLength, 1f, lineWidth));
+        Gizmos.matrix = oldMatrix;
     }
 }

@@ -163,6 +163,8 @@ MonoBehaviour:
   damage: 0
   telegraph: {fileID: 9022525068405650599}
   hitParticle: {fileID: 2088027835120572534}
+  InitialColor: {r: 1, g: 0.5529412, b: 0, a: 1}
+  InitialFillColor: {r: 1, g: 0.5019608, b: 0, a: 0.34901962}
   ResolutionColor: {r: 1, g: 0, b: 0, a: 1}
   ResolutionFillColor: {r: 0.7176471, g: 0, b: 0, a: 0.34901962}
   radius: 4

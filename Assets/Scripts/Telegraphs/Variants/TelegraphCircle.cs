@@ -39,6 +39,26 @@ public class TelegraphCircle : Telegraph
     [SerializeField] private int cascadeCount = 3;
     [SerializeField] private float cascadeRadiusIncrement = 1f;
 
+    protected override void SetupTelegraph()
+    {
+        base.SetupTelegraph();
+        /*if (cascades)
+        {
+            StartCoroutine(SpawnCascades());
+        }*/
+    }
+
+    protected override void ApplyShapeSettings(TelegraphShapeSettings shape)
+    {
+        if (shape == null)
+        {
+            return;
+        }
+
+        radius = shape.circle.radius;
+        Rescale(Vector3.one * radius * 2f);
+    }
+
     protected override IEnumerator SizeChange()
     {
         if (sizeChangeMode == SizeChangeMode.Gradual)

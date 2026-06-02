@@ -319,6 +319,336 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &264438019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264438021}
+  - component: {fileID: 264438020}
+  m_Layer: 0
+  m_Name: TelegraphSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &264438020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264438019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a51d7f792abfe84f876607b6ff50f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSystem
+  telegraphs:
+  - spawnRequest:
+      origin: {fileID: 1987506858}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 1
+      damage: 1
+      shape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.75
+  - spawnRequest:
+      origin: {fileID: 1987506858}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 1
+      damage: 1
+      shape:
+        shapeType: 2
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 2
+          outerRadius: 4
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.75
+  - spawnRequest:
+      origin: {fileID: 1987506858}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 1
+      damage: 1
+      shape:
+        shapeType: 2
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 4
+          outerRadius: 6
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.75
+  - spawnRequest:
+      origin: {fileID: 870569826}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 1
+      damage: 1
+      shape:
+        shapeType: 3
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 16
+          width: 2
+        cone:
+          radius: 0
+          angle: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - spawnRequest:
+      origin: {fileID: 462811240}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 1
+      damage: 1
+      shape:
+        shapeType: 3
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 16
+          width: 2
+        cone:
+          radius: 0
+          angle: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  playSequenceOnStart: 1
+  circlePrefab: {fileID: 5912568927844387783, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
+  conePrefab: {fileID: 3151106336401980981, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
+  donutPrefab: {fileID: 5057401855384863192, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
+  squarePrefab: {fileID: 1225879539051005169, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
+  linePrefab: {fileID: 6402482506290051996, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
+--- !u!4 &264438021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264438019}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1987506858}
+  - {fileID: 870569826}
+  - {fileID: 462811240}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &462811239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462811240}
+  m_Layer: 0
+  m_Name: telegraphSpawn (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &462811240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462811239}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 264438021}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1 &581524752
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +1062,37 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &870569825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870569826}
+  m_Layer: 0
+  m_Name: telegraphSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &870569826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870569825}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 264438021}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1 &991672513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,12 +1555,7 @@ MonoBehaviour:
   - {fileID: 1183342902}
   - {fileID: 1783650973}
   - {fileID: 1981822685}
-  telegraphPrefabs:
-  - {fileID: 5912568927844387783, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-  - {fileID: 1225879539051005169, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-  - {fileID: 5057401855384863192, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-  - {fileID: 6402482506290051996, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-  - {fileID: 3151106336401980981, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
+  telegraphSystem: {fileID: 264438020}
 --- !u!4 &1488178376
 Transform:
   m_ObjectHideFlags: 0
@@ -1827,6 +2183,37 @@ RectTransform:
   m_AnchoredPosition: {x: -787, y: -98.6}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1987506857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1987506858}
+  m_Layer: 0
+  m_Name: telegraphSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1987506858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987506857}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 264438021}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072700906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,291 +2601,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118934045}
   m_CullTransparentMesh: 1
---- !u!1001 &1410683378923332012
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3170818109352212364, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_Name
-      value: CircleTelegraph
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811635302306848165, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
---- !u!1001 &6917742636048672276
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 28826313469578943, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442495529455621399, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
-      propertyPath: m_Name
-      value: SquareTelegraph
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
---- !u!1001 &7622954423697028676
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 934442836937608963, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2461941367385883550, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
-      propertyPath: m_Name
-      value: LineTelegraph
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
---- !u!1001 &8538742343652341572
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688197958536809862, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410073616276319848, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
-      propertyPath: m_Name
-      value: ConeTelegraph
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
---- !u!1001 &8916293769927684092
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218056940722106714, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3226557093000098101, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
-      propertyPath: m_Name
-      value: DonutTelegraph
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2510,8 +2612,4 @@ SceneRoots:
   - {fileID: 991672520}
   - {fileID: 1692321735}
   - {fileID: 1488178376}
-  - {fileID: 1410683378923332012}
-  - {fileID: 6917742636048672276}
-  - {fileID: 7622954423697028676}
-  - {fileID: 8916293769927684092}
-  - {fileID: 8538742343652341572}
+  - {fileID: 264438021}

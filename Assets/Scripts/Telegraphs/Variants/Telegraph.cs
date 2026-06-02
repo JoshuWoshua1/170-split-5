@@ -9,12 +9,51 @@ public class Telegraph : MonoBehaviour
     // do nothing, snapshot player location upon the end of telegraph duration and apply damage if player is within collider bounds at that moment
     public MeshRenderer telegraph;
     public ParticleSystem hitParticle;
+    [SerializeField] private Color InitialColor;
+    [SerializeField] private Color InitialFillColor;
     [SerializeField] private Color ResolutionColor;
     [SerializeField] private Color ResolutionFillColor;
+
+    private TelegraphSpawnRequest spawnRequest;
+    private TelegraphSystem telegraphSystem;
+
+    public void ApplySpawnRequest(TelegraphSpawnRequest request, TelegraphSystem ownerSystem)
+    {
+        if (request == null)
+        {
+            return;
+        }
+
+        spawnRequest = request;
+        telegraphSystem = ownerSystem;
+
+        telegraphDuration = Mathf.Max(0f, request.duration);
+        damage = request.damage;
+
+        ApplyShapeSettings(request.shape);
+    }
+
+    protected virtual void ApplyShapeSettings(TelegraphShapeSettings shape)
+    {
+        // Implemented by shape variants.
+    }
+
+    protected TelegraphSpawnRequest GetSpawnRequest()
+    {
+        return spawnRequest;
+    }
     void Start()
     {
         Debug.LogWarning("DebugCheck");
+        telegraph.material.SetColor("_BaseColor", InitialColor);
+        telegraph.material.SetColor("_FillColor", InitialFillColor);
+        SetupTelegraph();
         StartCoroutine(TelegraphLifecycle());
+    }
+
+    protected virtual void SetupTelegraph()
+    {
+        // default does nothing, can be overridden by variants for additional setup
     }
 
     private IEnumerator TelegraphLifecycle()
@@ -64,7 +103,20 @@ public class Telegraph : MonoBehaviour
 
     protected virtual IEnumerator Cascade()
     {
-        yield break; // default does nothing, only used for telegraph variants that have cascading behavior
+        if (spawnRequest == null || telegraphSystem == null || spawnRequest.cascade == null)
+        {
+            yield break;
+        }
+
+        if (!spawnRequest.cascade.cascades || spawnRequest.cascade.cascadeCount <= 1)
+        {
+            yield break;
+        }
+
+        yield return new WaitForSeconds(spawnRequest.cascade.cascadeDelay);
+
+        TelegraphSpawnRequest nextRequest = CloneRequestForNextCascade(spawnRequest, transform.position);
+        telegraphSystem.SpawnTelegraph(nextRequest);
     }
 
     protected virtual void Rescale(Vector3 newScale)
@@ -84,5 +136,72 @@ public class Telegraph : MonoBehaviour
         {
             Debug.Log($"Applying {damage} damage to player.");
         }
+    }
+
+    private TelegraphSpawnRequest CloneRequestForNextCascade(TelegraphSpawnRequest source, Vector3 position)
+    {
+        TelegraphSpawnRequest next = new TelegraphSpawnRequest();
+        next.origin = source.origin;
+        next.worldPosition = position;
+        next.duration = source.duration;
+        next.damage = source.damage;
+
+        TelegraphShapeSettings baseShape = source.cascade.useCascadeShape
+            ? source.cascade.cascadeShape
+            : source.shape;
+
+        CopyShapeSettings(baseShape, next.shape);
+        ApplyCascadeSizeSteps(next.shape, source.cascade);
+
+        next.cascade.cascades = source.cascade.cascades;
+        next.cascade.cascadeDelay = source.cascade.cascadeDelay;
+        next.cascade.cascadeCount = source.cascade.cascadeCount - 1;
+        next.cascade.useCascadeShape = source.cascade.useCascadeShape;
+        CopyShapeSettings(source.cascade.cascadeShape, next.cascade.cascadeShape);
+        next.cascade.circleRadiusStep = source.cascade.circleRadiusStep;
+        next.cascade.squareSideLengthStep = source.cascade.squareSideLengthStep;
+        next.cascade.donutInnerRadiusStep = source.cascade.donutInnerRadiusStep;
+        next.cascade.donutOuterRadiusStep = source.cascade.donutOuterRadiusStep;
+        next.cascade.lineLengthStep = source.cascade.lineLengthStep;
+        next.cascade.lineWidthStep = source.cascade.lineWidthStep;
+        next.cascade.coneRadiusStep = source.cascade.coneRadiusStep;
+        next.cascade.coneAngleStep = source.cascade.coneAngleStep;
+
+        return next;
+    }
+
+    private static void CopyShapeSettings(TelegraphShapeSettings source, TelegraphShapeSettings destination)
+    {
+        if (source == null || destination == null)
+        {
+            return;
+        }
+
+        destination.shapeType = source.shapeType;
+        destination.circle.radius = source.circle.radius;
+        destination.square.sideLength = source.square.sideLength;
+        destination.donut.innerRadius = source.donut.innerRadius;
+        destination.donut.outerRadius = source.donut.outerRadius;
+        destination.line.length = source.line.length;
+        destination.line.width = source.line.width;
+        destination.cone.radius = source.cone.radius;
+        destination.cone.angle = source.cone.angle;
+    }
+
+    private static void ApplyCascadeSizeSteps(TelegraphShapeSettings shape, TelegraphCascadeSettings cascade)
+    {
+        if (shape == null || cascade == null)
+        {
+            return;
+        }
+
+        shape.circle.radius = Mathf.Max(0f, shape.circle.radius + cascade.circleRadiusStep);
+        shape.square.sideLength = Mathf.Max(0f, shape.square.sideLength + cascade.squareSideLengthStep);
+        shape.donut.innerRadius = Mathf.Max(0f, shape.donut.innerRadius + cascade.donutInnerRadiusStep);
+        shape.donut.outerRadius = Mathf.Max(shape.donut.innerRadius, shape.donut.outerRadius + cascade.donutOuterRadiusStep);
+        shape.line.length = Mathf.Max(0f, shape.line.length + cascade.lineLengthStep);
+        shape.line.width = Mathf.Max(0f, shape.line.width + cascade.lineWidthStep);
+        shape.cone.radius = Mathf.Max(0f, shape.cone.radius + cascade.coneRadiusStep);
+        shape.cone.angle = Mathf.Clamp(shape.cone.angle + cascade.coneAngleStep, 0f, 360f);
     }
 }
