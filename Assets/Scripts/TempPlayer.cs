@@ -88,9 +88,8 @@ public class TempPlayer : MonoBehaviour
 
         if (particleSystem != null)
         {
-            Vector3 particleScale = particleSystem.transform.localScale;
-            particleScale.x = lastFacingRight ? 1f : -1f;
-            particleSystem.transform.localScale = particleScale;
+            var shape = particleSystem.shape;
+            shape.rotation = new Vector3(0f, lastFacingRight ? 0f : 180f, 0f);
 
             Vector3 particlePosition = particleSystem.transform.localPosition;
             particlePosition.x = lastFacingRight
@@ -99,10 +98,6 @@ public class TempPlayer : MonoBehaviour
             particlePosition.y = particleRearOffset.y;
             particlePosition.z = particleRearOffset.z;
             particleSystem.transform.localPosition = particlePosition;
-
-            Vector3 particleRotation = particleSystem.transform.localEulerAngles;
-            particleRotation.y = lastFacingRight ? 270f : 90f;
-            particleSystem.transform.localEulerAngles = particleRotation;
         }
     }
 
