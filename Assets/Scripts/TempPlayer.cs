@@ -1,13 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System;
 
 public class TempPlayer : MonoBehaviour
 {
+    private const float MovementThreshold = 0.01f;
+    private const float DashInputThreshold = 0.5f;
+
     public static TempPlayer Instance { get; private set; }
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
+    [SerializeField] private ParticleSystem particleSystem;
+    [SerializeField] private Vector3 particleRearOffset = new Vector3(-0.25f, 0f, 0f);
+    // [SerializeField] private string movingParameter = "IsMoving";
     [SerializeField] private string dashingParameter = "IsDashing";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private CharacterController characterController;
@@ -16,11 +21,14 @@ public class TempPlayer : MonoBehaviour
     [SerializeField] private float dashDistance = 2f;
     [SerializeField] private float dashCooldown = 0.4f;
     [SerializeField] private float dashDuration = 0.15f;
+    [SerializeField] private float particleTailTime = 0.12f;
     
     private float dashTimer;
     private float dashCooldownTimer;
+    private float particleTailTimer;
     private bool isDashing;
     private Vector3 dashDirection;
+    private bool lastFacingRight = true;
 
     void Awake()
     {
@@ -37,33 +45,110 @@ public class TempPlayer : MonoBehaviour
 
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
-        if (spriteRenderer == null)
-        {
-            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        }
-
-        if (animator == null)
-        {
-            animator = GetComponentInChildren<Animator>();
-        }
+        InitializeReferences();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // bool isMoving = moveInput.sqrMagnitude > 0.01f;
+        UpdateFacingDirection();
+        UpdateAnimatorState();
+        UpdateParticleSystem();
+        UpdateDashTimer();
+    }
 
-        if (spriteRenderer != null)
+    void FixedUpdate()
+    {
+        Vector3 moveDirection = GetMoveDirection();
+        Vector3 velocity = GetMoveVelocity(moveDirection);
+
+        if (characterController != null)
         {
-            spriteRenderer.flipX = moveInput.x < 0f;
+            characterController.Move(velocity * Time.fixedDeltaTime);
+        }
+    }
+
+    private void UpdateFacingDirection()
+    {
+        if (spriteRenderer == null)
+        {
+            return;
         }
 
+        if (moveInput.x > MovementThreshold)
+        {
+            lastFacingRight = true;
+        }
+        else if (moveInput.x < -MovementThreshold)
+        {
+            lastFacingRight = false;
+        }
+
+        spriteRenderer.flipX = !lastFacingRight;
+
+        if (particleSystem != null)
+        {
+            Vector3 particleScale = particleSystem.transform.localScale;
+            particleScale.x = lastFacingRight ? 1f : -1f;
+            particleSystem.transform.localScale = particleScale;
+
+            Vector3 particlePosition = particleSystem.transform.localPosition;
+            particlePosition.x = lastFacingRight
+                ? -Mathf.Abs(particleRearOffset.x)
+                : Mathf.Abs(particleRearOffset.x);
+            particlePosition.y = particleRearOffset.y;
+            particlePosition.z = particleRearOffset.z;
+            particleSystem.transform.localPosition = particlePosition;
+
+            Vector3 particleRotation = particleSystem.transform.localEulerAngles;
+            particleRotation.y = lastFacingRight ? 270f : 90f;
+            particleSystem.transform.localEulerAngles = particleRotation;
+        }
+    }
+
+    private void UpdateAnimatorState()
+    {
         if (animator != null)
         {
             animator.SetBool(dashingParameter, isDashing);
         }
+    }
 
+    private void UpdateParticleSystem()
+    {
+        if (particleSystem == null)
+        {
+            return;
+        }
+
+        if (isDashing)
+        {
+            particleTailTimer = particleTailTime;
+            if (!particleSystem.isPlaying)
+            {
+                particleSystem.Play();
+            }
+            return;
+        }
+
+        if (particleTailTimer > 0f)
+        {
+            particleTailTimer -= Time.deltaTime;
+            if (!particleSystem.isPlaying)
+            {
+                particleSystem.Play();
+            }
+            return;
+        }
+
+        if (particleSystem.isPlaying)
+        {
+            particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        }
+    }
+
+    private void UpdateDashTimer()
+    {
         if (isDashing)
         {
             dashTimer -= Time.deltaTime;
@@ -72,33 +157,42 @@ public class TempPlayer : MonoBehaviour
                 isDashing = false;
                 dashCooldownTimer = dashCooldown;
             }
+            return;
         }
-        else if (dashCooldownTimer > 0f)
+
+        if (dashCooldownTimer > 0f)
         {
             dashCooldownTimer -= Time.deltaTime;
         }
     }
 
-    void FixedUpdate()
+    private void InitializeReferences()
     {
-        Vector3 moveDirection = new Vector3(moveInput.x, 0f, moveInput.y).normalized;
-        Vector3 velocity = moveDirection * moveSpeed;
+        characterController ??= GetComponent<CharacterController>();
+        spriteRenderer ??= GetComponentInChildren<SpriteRenderer>();
+        animator ??= GetComponentInChildren<Animator>();
+        particleSystem ??= GetComponentInChildren<ParticleSystem>();
+    }
 
+    private Vector3 GetMoveDirection()
+    {
+        return new Vector3(moveInput.x, 0f, moveInput.y).normalized;
+    }
+
+    private Vector3 GetMoveVelocity(Vector3 moveDirection)
+    {
         if (isDashing)
         {
-            velocity = dashDirection * (dashDistance / Mathf.Max(dashDuration, 0.01f));
+            return dashDirection * (dashDistance / Mathf.Max(dashDuration, MovementThreshold));
         }
 
-        if (characterController != null)
-        {
-            characterController.Move(velocity * Time.fixedDeltaTime);
-        }
+        return moveDirection * moveSpeed;
     }
 
     private void StartDash()
     {
-        Vector3 inputDirection = new Vector3(moveInput.x, 0f, moveInput.y);
-        dashDirection = inputDirection.sqrMagnitude > 0.01f
+        Vector3 inputDirection = GetMoveDirection();
+        dashDirection = inputDirection.sqrMagnitude > MovementThreshold
             ? inputDirection.normalized
             : transform.forward;
 
@@ -113,7 +207,7 @@ public class TempPlayer : MonoBehaviour
 
     public void OnDash(InputValue value)
     {
-        if (value.Get<float>() > 0.5f && !isDashing && dashCooldownTimer <= 0f)
+        if (value.Get<float>() > DashInputThreshold && !isDashing && dashCooldownTimer <= 0f)
         {
             StartDash();
         }
