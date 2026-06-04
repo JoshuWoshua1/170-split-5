@@ -6,7 +6,7 @@ public class TelegraphSquare : Telegraph
     [SerializeField] private float sideLength;
 
     // Ask chat to group these once code is done --------------------------------------------------
-    [Header("Size Change Settings")]
+    [Header("Resize Settings")]
     [SerializeField] private SizeChangeMode sizeChangeMode;
     [SerializeField] private float sizeChangeSpeed;
     [SerializeField] private float maxSideLength;
@@ -32,36 +32,44 @@ public class TelegraphSquare : Telegraph
 
     protected override IEnumerator SizeChange()
     {
-        if (sizeChangeMode == SizeChangeMode.Gradual)
+        TelegraphSizeChangeSettings requestSize = GetSpawnRequest()?.sizeChange;
+        SizeChangeMode mode = requestSize != null ? requestSize.mode : sizeChangeMode;
+        float speed = requestSize != null ? requestSize.sizeChangeSpeed : sizeChangeSpeed;
+        float targetSideLength = requestSize != null ? requestSize.maxPrimaryValue : maxSideLength;
+        int steps = requestSize != null ? requestSize.stepCount : stepCount;
+        float stepDelay = requestSize != null ? requestSize.timeBetweenSteps : timeBetweenSteps;
+        float finalDelay = requestSize != null ? requestSize.lastMomentDelay : lastMomentDelay;
+
+        if (mode == SizeChangeMode.Gradual)
         {
             float initialSideLength = sideLength;
             float elapsed = 0f;
-            while (elapsed < sizeChangeSpeed)
+            while (elapsed < speed)
             {
-                sideLength = Mathf.Lerp(initialSideLength, maxSideLength, elapsed / sizeChangeSpeed);
+                sideLength = Mathf.Lerp(initialSideLength, targetSideLength, elapsed / speed);
                 elapsed += Time.deltaTime;
                 Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
                 yield return null;
             }
-            sideLength = maxSideLength; // ensure it ends at max side length
+            sideLength = targetSideLength; // ensure it ends at max side length
             Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
         }
-        else if (sizeChangeMode == SizeChangeMode.LastMoment)
+        else if (mode == SizeChangeMode.LastMoment)
         {
-            yield return new WaitForSeconds(lastMomentDelay);
-            sideLength = maxSideLength;
+            yield return new WaitForSeconds(finalDelay);
+            sideLength = targetSideLength;
             Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
         }
-        else if (sizeChangeMode == SizeChangeMode.Stepped)
+        else if (mode == SizeChangeMode.Stepped)
         {
-            float stepIncrement = (maxSideLength - sideLength) / stepCount;
-            for (int i = 0; i < stepCount; i++)
+            float stepIncrement = (targetSideLength - sideLength) / Mathf.Max(1, steps);
+            for (int i = 0; i < Mathf.Max(1, steps); i++)
             {
                 sideLength += stepIncrement;
-                yield return new WaitForSeconds(timeBetweenSteps);
+                yield return new WaitForSeconds(stepDelay);
                 Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
             }
-            sideLength = maxSideLength; // ensure it ends at max side length
+            sideLength = targetSideLength; // ensure it ends at max side length
             Rescale(Vector3.one * sideLength); // scale the telegraph object to match the side length
         }
     }

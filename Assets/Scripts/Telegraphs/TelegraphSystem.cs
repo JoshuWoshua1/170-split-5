@@ -5,9 +5,13 @@ using System.Collections;
 [Serializable]
 public class TelegraphList
 {
+    [SerializeField] private bool useSpawnPoint;
+    [SerializeField] private TelegraphSpawnPoint spawnPoint;
     [SerializeField] private TelegraphSpawnRequest spawnRequest = new TelegraphSpawnRequest();
     [SerializeField] private float delayBeforeNextTelegraph;
 
+    public bool UseSpawnPoint => useSpawnPoint && spawnPoint != null;
+    public TelegraphSpawnPoint SpawnPoint => spawnPoint;
     public TelegraphSpawnRequest SpawnRequest => spawnRequest;
     public float DelayBeforeNextTelegraph => delayBeforeNextTelegraph;
 
@@ -55,12 +59,25 @@ public class TelegraphSystem : MonoBehaviour
 
         foreach (TelegraphList entry in telegraphs)
         {
-            if (entry == null || entry.SpawnRequest == null)
+            if (entry == null)
             {
                 continue;
             }
 
-            SpawnTelegraph(CloneSpawnRequest(entry.SpawnRequest));
+            TelegraphSpawnRequest requestToSpawn = null;
+            if (entry.UseSpawnPoint)
+            {
+                requestToSpawn = entry.SpawnPoint.CreateSpawnRequest();
+            }
+            else if (entry.SpawnRequest != null)
+            {
+                requestToSpawn = CloneSpawnRequest(entry.SpawnRequest);
+            }
+
+            if (requestToSpawn != null)
+            {
+                SpawnTelegraph(requestToSpawn);
+            }
 
             if (entry.DelayBeforeNextTelegraph > 0f)
             {
@@ -178,6 +195,17 @@ public class TelegraphSystem : MonoBehaviour
         clone.shape.line.width = source.shape.line.width;
         clone.shape.cone.radius = source.shape.cone.radius;
         clone.shape.cone.angle = source.shape.cone.angle;
+
+        if (source.sizeChange != null)
+        {
+            clone.sizeChange.mode = source.sizeChange.mode;
+            clone.sizeChange.sizeChangeSpeed = source.sizeChange.sizeChangeSpeed;
+            clone.sizeChange.maxPrimaryValue = source.sizeChange.maxPrimaryValue;
+            clone.sizeChange.maxSecondaryValue = source.sizeChange.maxSecondaryValue;
+            clone.sizeChange.stepCount = source.sizeChange.stepCount;
+            clone.sizeChange.timeBetweenSteps = source.sizeChange.timeBetweenSteps;
+            clone.sizeChange.lastMomentDelay = source.sizeChange.lastMomentDelay;
+        }
 
         clone.cascade.cascades = source.cascade.cascades;
         clone.cascade.cascadeDelay = source.cascade.cascadeDelay;

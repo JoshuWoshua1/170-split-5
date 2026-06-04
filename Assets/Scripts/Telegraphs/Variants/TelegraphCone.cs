@@ -7,7 +7,7 @@ public class TelegraphCone : Telegraph
     [SerializeField] private float angle;
 
     // Ask chat to group these once code is done --------------------------------------------------
-    [Header("Size Change Settings")]
+    [Header("Resize Settings")]
     [SerializeField] private SizeChangeMode sizeChangeMode;
     [SerializeField] private float sizeChangeSpeed;
     [SerializeField] private float maxRadius;
@@ -44,42 +44,51 @@ public class TelegraphCone : Telegraph
 
     protected override IEnumerator SizeChange()
     {
-        if (sizeChangeMode == SizeChangeMode.Gradual)
+        TelegraphSizeChangeSettings requestSize = GetSpawnRequest()?.sizeChange;
+        SizeChangeMode mode = requestSize != null ? requestSize.mode : sizeChangeMode;
+        float speed = requestSize != null ? requestSize.sizeChangeSpeed : sizeChangeSpeed;
+        float targetRadius = requestSize != null ? requestSize.maxPrimaryValue : maxRadius;
+        float targetAngle = requestSize != null ? requestSize.maxSecondaryValue : maxAngle;
+        int steps = requestSize != null ? requestSize.stepCount : stepCount;
+        float stepDelay = requestSize != null ? requestSize.timeBetweenSteps : timeBetweenSteps;
+        float finalDelay = requestSize != null ? requestSize.lastMomentDelay : lastMomentDelay;
+
+        if (mode == SizeChangeMode.Gradual)
         {
             float initialAngle = angle;
             float initialRadius = radius;
             float elapsed = 0f;
-            while (elapsed < sizeChangeSpeed)
+            while (elapsed < speed)
             {
-                radius = Mathf.Lerp(initialRadius, maxRadius, elapsed / sizeChangeSpeed);
-                angle = Mathf.Lerp(initialAngle, maxAngle, elapsed / sizeChangeSpeed);
+                radius = Mathf.Lerp(initialRadius, targetRadius, elapsed / speed);
+                angle = Mathf.Lerp(initialAngle, targetAngle, elapsed / speed);
                 elapsed += Time.deltaTime;
                 Rescale(Vector3.one * radius);
                 yield return null;
             }
-            radius = maxRadius; // ensure it ends at max radius
-            angle = maxAngle; // ensure it ends at max angle
+            radius = targetRadius; // ensure it ends at max radius
+            angle = targetAngle; // ensure it ends at max angle
             Rescale(Vector3.one * radius);
         }
-        else if (sizeChangeMode == SizeChangeMode.LastMoment)
+        else if (mode == SizeChangeMode.LastMoment)
         {
-            yield return new WaitForSeconds(lastMomentDelay);
-            radius = maxRadius;
-            angle = maxAngle;
+            yield return new WaitForSeconds(finalDelay);
+            radius = targetRadius;
+            angle = targetAngle;
             Rescale(Vector3.one * radius);
         }
-        else if (sizeChangeMode == SizeChangeMode.Stepped)
+        else if (mode == SizeChangeMode.Stepped)
         {
-            float stepIncrement = (maxRadius - radius) / stepCount;
-            for (int i = 0; i < stepCount; i++)
+            float stepIncrement = (targetRadius - radius) / Mathf.Max(1, steps);
+            for (int i = 0; i < Mathf.Max(1, steps); i++)
             {
-                angle += (maxAngle - angle) / stepCount;
+                angle += (targetAngle - angle) / Mathf.Max(1, steps);
                 radius += stepIncrement;
-                yield return new WaitForSeconds(timeBetweenSteps);
+                yield return new WaitForSeconds(stepDelay);
                 Rescale(Vector3.one * radius);
             }
-            angle = maxAngle; // ensure it ends at max angle
-            radius = maxRadius; // ensure it ends at max radius
+            angle = targetAngle; // ensure it ends at max angle
+            radius = targetRadius; // ensure it ends at max radius
             Rescale(Vector3.one * radius);
         }
     }

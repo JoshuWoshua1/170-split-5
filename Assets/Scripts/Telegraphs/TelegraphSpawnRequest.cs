@@ -15,6 +15,9 @@ public class TelegraphSpawnRequest
     [Header("Shape")]
     public TelegraphShapeSettings shape = new TelegraphShapeSettings();
 
+    [Header("Resize")]
+    public TelegraphSizeChangeSettings sizeChange = new TelegraphSizeChangeSettings();
+
     [Header("Cascade")]
     public TelegraphCascadeSettings cascade = new TelegraphCascadeSettings();
 }

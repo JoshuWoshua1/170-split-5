@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 28826313469578943}
   - component: {fileID: 1225879539051005169}
   m_Layer: 0
-  m_Name: SquareTelegraphTest
+  m_Name: DefaultSquareTelegraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
   ResolutionColor: {r: 1, g: 0, b: 0, a: 1}
   ResolutionFillColor: {r: 0.7176471, g: 0, b: 0, a: 0.34901962}
   sideLength: 4
-  sizeChangeMode: 2
+  sizeChangeMode: 0
   sizeChangeSpeed: 2
   maxSideLength: 8
   stepCount: 3

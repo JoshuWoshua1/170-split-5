@@ -19,7 +19,7 @@ public class TelegraphCircle : Telegraph
     [SerializeField] private float radius;
 
     // Ask chat to group these once code is done --------------------------------------------------
-    [Header("Size Change Settings")]
+    [Header("Resize Settings")]
     [SerializeField] private SizeChangeMode sizeChangeMode;
     [SerializeField] private float sizeChangeSpeed;
     [SerializeField] private float maxRadius;
@@ -61,36 +61,44 @@ public class TelegraphCircle : Telegraph
 
     protected override IEnumerator SizeChange()
     {
-        if (sizeChangeMode == SizeChangeMode.Gradual)
+        TelegraphSizeChangeSettings requestSize = GetSpawnRequest()?.sizeChange;
+        SizeChangeMode mode = requestSize != null ? requestSize.mode : sizeChangeMode;
+        float speed = requestSize != null ? requestSize.sizeChangeSpeed : sizeChangeSpeed;
+        float targetRadius = requestSize != null ? requestSize.maxPrimaryValue : maxRadius;
+        int steps = requestSize != null ? requestSize.stepCount : stepCount;
+        float stepDelay = requestSize != null ? requestSize.timeBetweenSteps : timeBetweenSteps;
+        float finalDelay = requestSize != null ? requestSize.lastMomentDelay : lastMomentDelay;
+
+        if (mode == SizeChangeMode.Gradual)
         {
             float initialRadius = radius;
             float elapsed = 0f;
-            while (elapsed < sizeChangeSpeed)
+            while (elapsed < speed)
             {
-                radius = Mathf.Lerp(initialRadius, maxRadius, elapsed / sizeChangeSpeed);
+                radius = Mathf.Lerp(initialRadius, targetRadius, elapsed / speed);
                 elapsed += Time.deltaTime;
                 Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
                 yield return null;
             }
-            radius = maxRadius; // ensure it ends at max radius
+            radius = targetRadius; // ensure it ends at max radius
             Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
         }
-        else if (sizeChangeMode == SizeChangeMode.LastMoment)
+        else if (mode == SizeChangeMode.LastMoment)
         {
-            yield return new WaitForSeconds(lastMomentDelay);
-            radius = maxRadius;
+            yield return new WaitForSeconds(finalDelay);
+            radius = targetRadius;
             Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
         }
-        else if (sizeChangeMode == SizeChangeMode.Stepped)
+        else if (mode == SizeChangeMode.Stepped)
         {
-            float stepIncrement = (maxRadius - radius) / stepCount;
-            for (int i = 0; i < stepCount; i++)
+            float stepIncrement = (targetRadius - radius) / Mathf.Max(1, steps);
+            for (int i = 0; i < Mathf.Max(1, steps); i++)
             {
                 radius += stepIncrement;
-                yield return new WaitForSeconds(timeBetweenSteps);
+                yield return new WaitForSeconds(stepDelay);
                 Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
             }
-            radius = maxRadius; // ensure it ends at max radius
+            radius = targetRadius; // ensure it ends at max radius
             Rescale(Vector3.one * radius * 2f); // scale the telegraph object to match the radius (diameter)
         }
     }
