@@ -162,7 +162,7 @@ MonoBehaviour:
   telegraphDuration: 3
   damage: 0
   telegraph: {fileID: 9022525068405650599}
-  hitParticle: {fileID: 2088027835120572534}
+  hitEffect: {fileID: 6258147999668681474}
   InitialColor: {r: 1, g: 0.5529412, b: 0, a: 1}
   InitialFillColor: {r: 1, g: 0.5019608, b: 0, a: 0.34901962}
   ResolutionColor: {r: 1, g: 0, b: 0, a: 1}
@@ -193,7 +193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4278757275553585381
 Transform:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:

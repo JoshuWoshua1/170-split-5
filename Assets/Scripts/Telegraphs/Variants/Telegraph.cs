@@ -8,7 +8,7 @@ public class Telegraph : MonoBehaviour
     //[SerializeField] private Collider telegraphCollider;
     // do nothing, snapshot player location upon the end of telegraph duration and apply damage if player is within collider bounds at that moment
     public MeshRenderer telegraph;
-    public ParticleSystem hitParticle;
+    public GameObject hitEffect;
     [SerializeField] private Color InitialColor;
     [SerializeField] private Color InitialFillColor;
     [SerializeField] private Color ResolutionColor;
@@ -67,7 +67,7 @@ public class Telegraph : MonoBehaviour
         StartCoroutine(ColorChange());
 
         yield return new WaitForSeconds(telegraphDuration / 2);
-        hitParticle.Play();
+        hitEffect.SetActive(true);
         SnapshotDamage();
         telegraph.enabled = false; // hide telegraph after hit
 
