@@ -192,9 +192,10 @@ public class TempPlayer : MonoBehaviour
     private void StartDash()
     {
         Vector3 inputDirection = GetMoveDirection();
+        Vector3 fixedDirection = new Vector3(lastMoveDirection.x, 0f, lastMoveDirection.y);
         dashDirection = inputDirection.sqrMagnitude > MovementThreshold
             ? inputDirection.normalized
-            : lastMoveDirection;
+            : fixedDirection;
 
         isDashing = true;
         dashTimer = dashDuration;
