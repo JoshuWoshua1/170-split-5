@@ -8,10 +8,10 @@ public class TempPlayer : MonoBehaviour
 
     public static TempPlayer Instance { get; private set; }
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Animator animator;
-    [SerializeField] private ParticleSystem particleSystem;
-    [SerializeField] private Vector3 particleRearOffset = new Vector3(-0.25f, 0f, 0f);
+    [SerializeField] private SpriteRenderer playerSprite; // changed to playerSprite for clarity
+    [SerializeField] private Animator cowAnimator; // changed to cowAnimator for clarity
+    [SerializeField] private ParticleSystem dashParticle; // changed to dashParticle for clarity
+    [SerializeField] private Vector3 dashParticleRearOffset = new Vector3(-0.25f, 0f, 0f);
     // [SerializeField] private string movingParameter = "IsMoving";
     [SerializeField] private string dashingParameter = "IsDashing";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -74,7 +74,7 @@ public class TempPlayer : MonoBehaviour
 
     private void UpdateFacingDirection()
     {
-        if (spriteRenderer == null)
+        if (playerSprite == null)
         {
             return;
         }
@@ -88,34 +88,34 @@ public class TempPlayer : MonoBehaviour
             lastFacingRight = false;
         }
 
-        spriteRenderer.flipX = !lastFacingRight;
+        playerSprite.flipX = !lastFacingRight;
 
-        if (particleSystem != null)
+        if (dashParticle != null)
         {
-            var shape = particleSystem.shape;
+            var shape = dashParticle.shape;
             shape.rotation = new Vector3(0f, lastFacingRight ? 0f : 180f, 0f);
 
-            Vector3 particlePosition = particleSystem.transform.localPosition;
+            Vector3 particlePosition = dashParticle.transform.localPosition;
             particlePosition.x = lastFacingRight
-                ? -Mathf.Abs(particleRearOffset.x)
-                : Mathf.Abs(particleRearOffset.x);
-            particlePosition.y = particleRearOffset.y;
-            particlePosition.z = particleRearOffset.z;
-            particleSystem.transform.localPosition = particlePosition;
+                ? -Mathf.Abs(dashParticleRearOffset.x)
+                : Mathf.Abs(dashParticleRearOffset.x);
+            particlePosition.y = dashParticleRearOffset.y;
+            particlePosition.z = dashParticleRearOffset.z;
+            dashParticle.transform.localPosition = particlePosition;
         }
     }
 
     private void UpdateAnimatorState()
     {
-        if (animator != null)
+        if (cowAnimator != null)
         {
-            animator.SetBool(dashingParameter, isDashing);
+            cowAnimator.SetBool(dashingParameter, isDashing);
         }
     }
 
     private void UpdateParticleSystem()
     {
-        if (particleSystem == null)
+        if (dashParticle == null)
         {
             return;
         }
@@ -123,9 +123,9 @@ public class TempPlayer : MonoBehaviour
         if (isDashing)
         {
             particleTailTimer = particleTailTime;
-            if (!particleSystem.isPlaying)
+            if (!dashParticle.isPlaying)
             {
-                particleSystem.Play();
+                dashParticle.Play();
             }
             return;
         }
@@ -133,16 +133,16 @@ public class TempPlayer : MonoBehaviour
         if (particleTailTimer > 0f)
         {
             particleTailTimer -= Time.deltaTime;
-            if (!particleSystem.isPlaying)
+            if (!dashParticle.isPlaying)
             {
-                particleSystem.Play();
+                dashParticle.Play();
             }
             return;
         }
 
-        if (particleSystem.isPlaying)
+        if (dashParticle.isPlaying)
         {
-            particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            dashParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         }
     }
 
@@ -168,9 +168,9 @@ public class TempPlayer : MonoBehaviour
     private void InitializeReferences()
     {
         characterController ??= GetComponent<CharacterController>();
-        spriteRenderer ??= GetComponentInChildren<SpriteRenderer>();
-        animator ??= GetComponentInChildren<Animator>();
-        particleSystem ??= GetComponentInChildren<ParticleSystem>();
+        playerSprite ??= GetComponentInChildren<SpriteRenderer>();
+        cowAnimator ??= GetComponentInChildren<Animator>();
+        dashParticle ??= GetComponentInChildren<ParticleSystem>();
     }
 
     private Vector3 GetMoveDirection()
