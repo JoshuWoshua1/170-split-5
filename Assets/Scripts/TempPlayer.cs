@@ -22,13 +22,17 @@ public class TempPlayer : MonoBehaviour
     [SerializeField] private float dashCooldown = 0.4f;
     [SerializeField] private float dashDuration = 0.15f;
     [SerializeField] private float particleTailTime = 0.12f;
-    
+    [SerializeField] private int dashCharges = 2;
+    [SerializeField] private float dashRecoveryRate = 3f; // in seconds
+    private float dashChargeTimer;
     private float dashTimer;
     private float dashCooldownTimer;
     private float particleTailTimer;
     private bool isDashing;
     private Vector3 dashDirection;
     private bool lastFacingRight = true;
+
+    [SerializeField] private int health = 3;
 
     void Awake()
     {
@@ -195,16 +199,36 @@ public class TempPlayer : MonoBehaviour
         dashTimer = dashDuration;
     }
 
-    public void OnMove(InputValue value)
+    private void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
     }
 
-    public void OnDash(InputValue value)
+    private void OnDash(InputValue value)
     {
         if (value.Get<float>() > DashInputThreshold && !isDashing && dashCooldownTimer <= 0f)
         {
             StartDash();
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        GameManager.Instance.GameOver();
+        Debug.Log("Player has died.");
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }

@@ -135,6 +135,7 @@ public class Telegraph : MonoBehaviour
         if (IsPlayerInTelegraph(TempPlayer.Instance.transform))
         {
             Debug.Log($"Applying {damage} damage to player.");
+            TempPlayer.Instance.TakeDamage(damage);
         }
     }
 
