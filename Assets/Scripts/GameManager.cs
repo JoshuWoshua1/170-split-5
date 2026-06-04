@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -21,21 +20,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float GameTimer = 30f; // max game time
     private float currentTime;
     public bool isGameOver;
-    public bool vicoryAchieved;
+    public bool victoryAchieved;
 
     public void GameOver(bool playerDied = false)
     {
         isGameOver = true;
         Debug.Log("Game Over!");
-        Time.timeScale = 0f; // Pause the game
         if (playerDied)
         {
             Debug.Log("Player has died. Game Over!"); // lose
         }
         if (currentTime <= 0f)
         {
+            victoryAchieved = true;
             Debug.Log("Time's up! Game Over!"); // win
         }
+        Time.timeScale = 0f; // Pause the game
     }
 
     void Start()

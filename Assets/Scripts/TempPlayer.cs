@@ -17,6 +17,7 @@ public class TempPlayer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private CharacterController characterController;
     private Vector2 moveInput;
+    private Vector2 lastMoveDirection;
 
     [SerializeField] private float dashDistance = 2f;
     [SerializeField] private float dashCooldown = 0.4f;
@@ -193,7 +194,7 @@ public class TempPlayer : MonoBehaviour
         Vector3 inputDirection = GetMoveDirection();
         dashDirection = inputDirection.sqrMagnitude > MovementThreshold
             ? inputDirection.normalized
-            : transform.forward;
+            : lastMoveDirection;
 
         isDashing = true;
         dashTimer = dashDuration;
@@ -202,6 +203,10 @@ public class TempPlayer : MonoBehaviour
     private void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+        if (moveInput.sqrMagnitude > MovementThreshold)
+        {
+            lastMoveDirection = moveInput.normalized;
+        }   
     }
 
     private void OnDash(InputValue value)

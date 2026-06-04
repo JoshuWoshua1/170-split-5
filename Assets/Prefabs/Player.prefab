@@ -4999,15 +4999,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TempPlayer
   moveSpeed: 5
-  spriteRenderer: {fileID: 2297463915926662430}
-  animator: {fileID: 622577828835169451}
-  particleSystem: {fileID: 6515069728750500977}
-  particleRearOffset: {x: -0.15, y: 0, z: 0}
+  playerSprite: {fileID: 2297463915926662430}
+  cowAnimator: {fileID: 622577828835169451}
+  dashParticle: {fileID: 6515069728750500977}
+  dashParticleRearOffset: {x: -0.25, y: 0, z: 0}
   dashingParameter: IsDashingAnim
   dashDistance: 2
   dashCooldown: 0.8
   dashDuration: 0.15
   particleTailTime: 0.17
+  dashCharges: 2
+  dashRecoveryRate: 3
+  health: 3
 --- !u!114 &2853723118563722830
 MonoBehaviour:
   m_ObjectHideFlags: 0
