@@ -5,7 +5,7 @@ using System.Collections;
 [Serializable]
 public class TelegraphList
 {
-    [SerializeField] private bool useSpawnPoint;
+    private bool useSpawnPoint = true; //always true while telegraph spawn request is commented out
     [SerializeField] private TelegraphSpawnPoint spawnPoint;
     //[SerializeField] private TelegraphSpawnRequest spawnRequest = new TelegraphSpawnRequest();
     [SerializeField] private float delayBeforeNextTelegraph;
