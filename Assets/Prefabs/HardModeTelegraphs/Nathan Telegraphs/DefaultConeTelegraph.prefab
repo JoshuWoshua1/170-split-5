@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2604294566915963460
+--- !u!1 &4112080740614685052
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2067681408279379076}
-  - component: {fileID: 3425529633353163234}
-  - component: {fileID: 8088182837414978095}
-  - component: {fileID: 7351711290379461284}
+  - component: {fileID: 7242604176508384723}
+  - component: {fileID: 1510850902346835623}
+  - component: {fileID: 9022525068405650599}
+  - component: {fileID: 2866694068366492241}
   m_Layer: 0
-  m_Name: QuadCircle
+  m_Name: QuadCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2067681408279379076
+--- !u!4 &7242604176508384723
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2604294566915963460}
+  m_GameObject: {fileID: 4112080740614685052}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.2}
+  m_LocalScale: {x: 2.0040762, y: 2.0040762, z: 0.40081525}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 4811635302306848165}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!33 &3425529633353163234
+  m_Father: {fileID: 4688197958536809862}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
+--- !u!33 &1510850902346835623
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2604294566915963460}
+  m_GameObject: {fileID: 4112080740614685052}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8088182837414978095
+--- !u!23 &9022525068405650599
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2604294566915963460}
+  m_GameObject: {fileID: 4112080740614685052}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e333f9d076d7c3244a1aa1fd11849114, type: 2}
+  - {fileID: 2100000, guid: edd7ccad2491c2d4a9f16c26e0f2d41b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,13 +91,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7351711290379461284
+--- !u!64 &2866694068366492241
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2604294566915963460}
+  m_GameObject: {fileID: 4112080740614685052}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -113,7 +113,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &3170818109352212364
+--- !u!1 &5410073616276319848
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,65 +121,62 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4811635302306848165}
-  - component: {fileID: 5912568927844387783}
+  - component: {fileID: 4688197958536809862}
+  - component: {fileID: 3151106336401980981}
   m_Layer: 0
-  m_Name: AlienFaceTelegraph
+  m_Name: DefaultConeTelegraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4811635302306848165
+--- !u!4 &4688197958536809862
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3170818109352212364}
+  m_GameObject: {fileID: 5410073616276319848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: 0.000020019364, z: -0.49}
+  m_LocalPosition: {x: -1.76, y: 0.12, z: -2.78}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 2067681408279379076}
-  - {fileID: 2508405149274802575}
+  - {fileID: 7242604176508384723}
+  - {fileID: 4278757275553585381}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5912568927844387783
+--- !u!114 &3151106336401980981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3170818109352212364}
+  m_GameObject: {fileID: 5410073616276319848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 209f617cd9b113242a3ff3526e9939e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c1ec14037dc1554bba245991ee59e19, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TelegraphCircle
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphCone
   telegraphDuration: 3
   damage: 0
-  telegraph: {fileID: 8088182837414978095}
-  hitEffect: {fileID: 7436527824304476712}
+  telegraph: {fileID: 9022525068405650599}
+  hitEffect: {fileID: 6258147999668681474}
   InitialColor: {r: 1, g: 0.5529412, b: 0, a: 1}
   InitialFillColor: {r: 1, g: 0.5019608, b: 0, a: 0.34901962}
   ResolutionColor: {r: 1, g: 0, b: 0, a: 1}
-  ResolutionFillColor: {r: 0.7169812, g: 0, b: 0, a: 0.34901962}
-  radius: 2
+  ResolutionFillColor: {r: 0.7176471, g: 0, b: 0, a: 0.34901962}
+  radius: 4
+  angle: 120
   sizeChangeMode: 0
-  sizeChangeSpeed: 2
-  maxRadius: 5
+  sizeChangeSpeed: 3
+  maxRadius: 6
+  maxAngle: 180
   stepCount: 3
-  timeBetweenSteps: 0.15
-  lastMomentDelay: 0.5
-  cascades: 0
-  cascadeShape: 0
-  cascadeDelay: 1
-  cascadeCount: 3
-  cascadeRadiusIncrement: 1
---- !u!1 &7436527824304476712
+  timeBetweenSteps: 0.75
+  lastMomentDelay: 1
+--- !u!1 &6258147999668681474
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,9 +184,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2508405149274802575}
-  - component: {fileID: 780815585008958339}
-  - component: {fileID: 7256978979902168966}
+  - component: {fileID: 4278757275553585381}
+  - component: {fileID: 2088027835120572534}
+  - component: {fileID: 7184957642516188683}
   m_Layer: 0
   m_Name: HitParticles
   m_TagString: Untagged
@@ -197,28 +194,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &2508405149274802575
+--- !u!4 &4278757275553585381
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7436527824304476712}
+  m_GameObject: {fileID: 6258147999668681474}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4811635302306848165}
+  m_Father: {fileID: 4688197958536809862}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!198 &780815585008958339
+--- !u!198 &2088027835120572534
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7436527824304476712}
+  m_GameObject: {fileID: 6258147999668681474}
   serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1
@@ -295,7 +292,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -348,7 +345,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -783,7 +780,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 10
+    maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -843,11 +840,11 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 2
+    type: 4
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0
+    radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -1213,7 +1210,7 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -1226,34 +1223,16 @@ ParticleSystem:
           time: 0
           value: 0
           inSlope: 0
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.34801897
+          time: 1
           value: 1
           inSlope: 1
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.6088277
-          value: 0.5856725
-          inSlope: -0.27471694
-          outSlope: -0.27471694
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.99570817
-          value: 0
-          inSlope: 1
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -1553,7 +1532,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxes: 1
+    separateAxes: 0
   ColorModule:
     enabled: 1
     gradient:
@@ -5011,14 +4990,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &7256978979902168966
+--- !u!199 &7184957642516188683
 ParticleSystemRenderer:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7436527824304476712}
+  m_GameObject: {fileID: 6258147999668681474}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -5037,7 +5016,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16f2a3d7fce0eda45ab2171b04cf964c, type: 2}
+  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5064,7 +5043,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.4
+  m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
