@@ -2736,7 +2736,7 @@ MonoBehaviour:
   difficultyLevel: 1
   difficultyText: {fileID: 1965160420}
   EasyScene: JoshTest
-  MediumScene: JoshTest
+  MediumScene: BrodyScene
   HardScene: JoshTest
 --- !u!114 &1525557899
 MonoBehaviour:
