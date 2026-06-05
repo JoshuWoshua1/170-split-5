@@ -160,6 +160,7 @@ public class TelegraphSpawnPoint : MonoBehaviour
                 Matrix4x4 oldLineMatrix = Gizmos.matrix;
                 Gizmos.matrix = Matrix4x4.TRS(position, rotation, Vector3.one);
                 Gizmos.DrawWireCube(Vector3.zero, new Vector3(length, 1f, width));
+                Gizmos.DrawLine(Vector3.zero, Vector3.right * (Mathf.Max(length, width) * (2f / 3f)));
                 Gizmos.matrix = oldLineMatrix;
                 break;
 
