@@ -22,6 +22,7 @@ public class TelegraphSystem : MonoBehaviour
     [Header("Inspector Sequence")]
     [SerializeField] private TelegraphList[] telegraphs;
     [SerializeField] private bool playSequenceOnStart;
+    [SerializeField] private float initialDelay = 0f;
 
     [Header("Shape Prefabs")]
     [SerializeField] private TelegraphCircle circlePrefab;
@@ -55,6 +56,11 @@ public class TelegraphSystem : MonoBehaviour
         if (telegraphs == null || telegraphs.Length == 0)
         {
             yield break;
+        }
+
+        if (initialDelay > 0f)
+        {
+            yield return new WaitForSeconds(initialDelay);
         }
 
         foreach (TelegraphList entry in telegraphs)
