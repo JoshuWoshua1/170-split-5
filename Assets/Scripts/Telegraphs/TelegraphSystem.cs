@@ -7,12 +7,12 @@ public class TelegraphList
 {
     [SerializeField] private bool useSpawnPoint;
     [SerializeField] private TelegraphSpawnPoint spawnPoint;
-    [SerializeField] private TelegraphSpawnRequest spawnRequest = new TelegraphSpawnRequest();
+    //[SerializeField] private TelegraphSpawnRequest spawnRequest = new TelegraphSpawnRequest();
     [SerializeField] private float delayBeforeNextTelegraph;
 
     public bool UseSpawnPoint => useSpawnPoint && spawnPoint != null;
     public TelegraphSpawnPoint SpawnPoint => spawnPoint;
-    public TelegraphSpawnRequest SpawnRequest => spawnRequest;
+    //public TelegraphSpawnRequest SpawnRequest => spawnRequest;
     public float DelayBeforeNextTelegraph => delayBeforeNextTelegraph;
 
 }
@@ -75,10 +75,10 @@ public class TelegraphSystem : MonoBehaviour
             {
                 requestToSpawn = entry.SpawnPoint.CreateSpawnRequest();
             }
-            else if (entry.SpawnRequest != null)
+            /*else if (entry.SpawnRequest != null)
             {
                 requestToSpawn = CloneSpawnRequest(entry.SpawnRequest);
-            }
+            }*/
 
             if (requestToSpawn != null)
             {

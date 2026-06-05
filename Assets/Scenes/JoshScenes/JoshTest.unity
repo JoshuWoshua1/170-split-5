@@ -119,6 +119,147 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7134147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7134148}
+  - component: {fileID: 7134149}
+  m_Layer: 0
+  m_Name: Circle_0 (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7134148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134147}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.878098, z: -0, w: 0.47848082}
+  m_LocalPosition: {x: 3.94, y: 0, z: -0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 122.828, z: 0}
+--- !u!114 &7134149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!1 &20243634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20243635}
+  m_Layer: 0
+  m_Name: Keyboard Cleave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20243635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20243634}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.17563999, y: 0, z: 0.17119002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 429655217}
+  - {fileID: 876759815}
+  m_Father: {fileID: 321040134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40967030
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +299,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &48968129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 48968130}
+  m_Layer: 0
+  m_Name: hand1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &48968130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48968129}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.362, y: 0, z: 0.24555}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1955716012}
+  - {fileID: 1924148858}
+  - {fileID: 2123430732}
+  - {fileID: 298645506}
+  m_Father: {fileID: 1369126353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &80213487
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +425,114 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &112201374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112201375}
+  - component: {fileID: 112201376}
+  m_Layer: 0
+  m_Name: Circle_0 (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &112201375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112201374}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.878098, z: -0, w: 0.47848082}
+  m_LocalPosition: {x: 7.34, y: 0, z: 1.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 122.828, z: 0}
+--- !u!114 &112201376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112201374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &135755862
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +660,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &172072152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172072153}
+  m_Layer: 0
+  m_Name: hand2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172072153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172072152}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.362, y: 0, z: 0.24555}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1847346711}
+  - {fileID: 1721840193}
+  - {fileID: 1422523380}
+  - {fileID: 386819829}
+  m_Father: {fileID: 1369126353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &188052266
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +814,114 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12.751186, y: 0.52616674, z: 1}
   m_Center: {x: 0.015027046, y: -0.0035165846, z: 5.5374647e-18}
+--- !u!1 &198591395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198591396}
+  - component: {fileID: 198591397}
+  m_Layer: 0
+  m_Name: Circle_0 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &198591396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198591395}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -6.13, y: 0, z: -0.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &198591397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198591395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &199735103
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +1111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cascading Cross
       objectReference: {fileID: 0}
+    - target: {fileID: 8780023946113783790, guid: e1237574677d080498d5b7b090ca1c6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -700,6 +1131,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a51d7f792abfe84f876607b6ff50f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TelegraphSystem
+--- !u!1 &298645504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 298645506}
+  - component: {fileID: 298645505}
+  m_Layer: 0
+  m_Name: Donut_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &298645505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298645504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 7
+        outerRadius: 11
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!4 &298645506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298645504}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.49689, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 48968130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &307479008
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +1330,1092 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &321040132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321040134}
+  - component: {fileID: 321040133}
+  m_Layer: 0
+  m_Name: Keyboard Attacks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &321040133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321040132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a51d7f792abfe84f876607b6ff50f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSystem
+  telegraphs:
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 429655216}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 1
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 876759816}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 1
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1807751181}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 461725473}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 7134149}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 112201376}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1056557447}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 1
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1366413163}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 974821475}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 198591397}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1837248277}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 621272760}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  playSequenceOnStart: 1
+  initialDelay: 3
+  circlePrefab: {fileID: 5912568927844387783, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
+  conePrefab: {fileID: 3151106336401980981, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
+  donutPrefab: {fileID: 5057401855384863192, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
+  squarePrefab: {fileID: 1225879539051005169, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
+  linePrefab: {fileID: 6402482506290051996, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
+--- !u!4 &321040134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321040132}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.67253, y: 0, z: 0.32524}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 20243635}
+  - {fileID: 762812644}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &386819827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386819829}
+  - component: {fileID: 386819828}
+  m_Layer: 0
+  m_Name: Donut_2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &386819828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386819827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 7
+        outerRadius: 11
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!4 &386819829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386819827}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.50311, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 172072153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &429655215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429655217}
+  - component: {fileID: 429655216}
+  m_Layer: 0
+  m_Name: Line_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &429655216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429655215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 4
+    damage: 1
+    shape:
+      shapeType: 3
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 3
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 19
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!4 &429655217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429655215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20243635}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &461725471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461725472}
+  - component: {fileID: 461725473}
+  m_Layer: 0
+  m_Name: Circle_0 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461725472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461725471}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.878098, z: -0, w: 0.47848082}
+  m_LocalPosition: {x: 6.34, y: 0, z: -3.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 122.828, z: 0}
+--- !u!114 &461725473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461725471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &536600044
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +2491,263 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536600044}
   m_CullTransparentMesh: 1
+--- !u!1 &621272759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 621272761}
+  - component: {fileID: 621272760}
+  m_Layer: 0
+  m_Name: Circle_0 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &621272760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621272759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!4 &621272761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621272759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -6.45, y: 0, z: 2.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &646978529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646978530}
+  - component: {fileID: 646978531}
+  m_Layer: 0
+  m_Name: Donut_1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &646978530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646978529}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 904354635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &646978531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646978529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 4
+        outerRadius: 7
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!1 &762812643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 762812644}
+  m_Layer: 0
+  m_Name: Keys Falling Down
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &762812644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762812643}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.17563999, y: 0, z: 0.17119002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1366413162}
+  - {fileID: 974821474}
+  - {fileID: 198591396}
+  - {fileID: 1837248276}
+  - {fileID: 621272761}
+  - {fileID: 1807751180}
+  - {fileID: 461725472}
+  - {fileID: 7134148}
+  - {fileID: 112201375}
+  - {fileID: 1056557446}
+  m_Father: {fileID: 321040134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &776370727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,6 +2976,114 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &871008579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 871008581}
+  - component: {fileID: 871008580}
+  m_Layer: 0
+  m_Name: Donut_2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &871008580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871008579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 7
+        outerRadius: 11
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!4 &871008581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871008579}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 904354635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &876051131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +3166,114 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &876759814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876759815}
+  - component: {fileID: 876759816}
+  m_Layer: 0
+  m_Name: Line_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876759815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876759814}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20243635}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &876759816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876759814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 4
+    damage: 1
+    shape:
+      shapeType: 3
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 3
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 19
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &890603933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,6 +3317,93 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &895475343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 895475345}
+  - component: {fileID: 895475344}
+  m_Layer: 0
+  m_Name: Keyboard Attacks (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &895475344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895475343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a51d7f792abfe84f876607b6ff50f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSystem
+  telegraphs: []
+  playSequenceOnStart: 1
+  initialDelay: 3
+  circlePrefab: {fileID: 5912568927844387783, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
+  conePrefab: {fileID: 3151106336401980981, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
+  donutPrefab: {fileID: 5057401855384863192, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
+  squarePrefab: {fileID: 1225879539051005169, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
+  linePrefab: {fileID: 6402482506290051996, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
+--- !u!4 &895475345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895475343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.67253, y: 0, z: 0.32524}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &904354634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904354635}
+  m_Layer: 0
+  m_Name: Middle slam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904354635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904354634}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1386246349}
+  - {fileID: 1293053101}
+  - {fileID: 646978530}
+  - {fileID: 871008581}
+  m_Father: {fileID: 1369126353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &911316552
 GameObject:
@@ -1476,6 +3661,222 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959159927}
   m_CullTransparentMesh: 1
+--- !u!1 &974821473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974821474}
+  - component: {fileID: 974821475}
+  m_Layer: 0
+  m_Name: Circle_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974821474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974821473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.63, y: 0, z: -2.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &974821475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974821473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!1 &1056557445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056557446}
+  - component: {fileID: 1056557447}
+  m_Layer: 0
+  m_Name: Circle_0 (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056557446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056557445}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.878098, z: -0, w: 0.47848082}
+  m_LocalPosition: {x: 3.76, y: 0, z: 2.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 122.828, z: 0}
+--- !u!114 &1056557447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056557445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &1089697599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +3996,1437 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212726073}
   m_CullTransparentMesh: 1
+--- !u!1 &1293053100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293053101}
+  - component: {fileID: 1293053102}
+  m_Layer: 0
+  m_Name: Donut_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1293053101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293053100}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 904354635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293053102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293053100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 2
+        outerRadius: 4
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!1 &1366413161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366413162}
+  - component: {fileID: 1366413163}
+  m_Layer: 0
+  m_Name: Circle_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366413162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366413161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -6.3, y: 0, z: -3.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1366413163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366413161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!1 &1369126351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369126353}
+  - component: {fileID: 1369126352}
+  m_Layer: 0
+  m_Name: Hand Smash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1369126352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369126351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a51d7f792abfe84f876607b6ff50f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSystem
+  telegraphs:
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1955716013}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1847346712}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 1.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1924148859}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1721840194}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 2123430733}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1422523381}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 298645505}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 386819828}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1386246350}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 1.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1293053102}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 646978531}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1386246350}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 871008580}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 1
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 1293053102}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 646978531}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0.5
+  - useSpawnPoint: 1
+    spawnPoint: {fileID: 871008580}
+    spawnRequest:
+      origin: {fileID: 0}
+      worldPosition: {x: 0, y: 0, z: 0}
+      duration: 0
+      damage: 0
+      shape:
+        shapeType: 0
+        circle:
+          radius: 0
+        square:
+          sideLength: 0
+        donut:
+          innerRadius: 0
+          outerRadius: 0
+        line:
+          length: 0
+          width: 0
+        cone:
+          radius: 0
+          angle: 0
+      sizeChange:
+        mode: 0
+        sizeChangeSpeed: 0
+        maxPrimaryValue: 0
+        maxSecondaryValue: 0
+        stepCount: 0
+        timeBetweenSteps: 0
+        lastMomentDelay: 0
+      cascade:
+        cascades: 0
+        cascadeDelay: 0
+        cascadeCount: 0
+        useCascadeShape: 0
+        cascadeShape:
+          shapeType: 0
+          circle:
+            radius: 0
+          square:
+            sideLength: 0
+          donut:
+            innerRadius: 0
+            outerRadius: 0
+          line:
+            length: 0
+            width: 0
+          cone:
+            radius: 0
+            angle: 0
+        circleRadiusStep: 0
+        squareSideLengthStep: 0
+        donutInnerRadiusStep: 0
+        donutOuterRadiusStep: 0
+        lineLengthStep: 0
+        lineWidthStep: 0
+        coneRadiusStep: 0
+        coneAngleStep: 0
+    delayBeforeNextTelegraph: 0
+  playSequenceOnStart: 1
+  initialDelay: 0
+  circlePrefab: {fileID: 5912568927844387783, guid: c9461a09958b929468bdb92b6d19fa62, type: 3}
+  conePrefab: {fileID: 3151106336401980981, guid: 686a7da1f6f15794fb0cd9441dcfc619, type: 3}
+  donutPrefab: {fileID: 5057401855384863192, guid: 485f1d429a96b084f97994b01fa42c4d, type: 3}
+  squarePrefab: {fileID: 1225879539051005169, guid: 609eb483323761c40a8ff09cfd12597c, type: 3}
+  linePrefab: {fileID: 6402482506290051996, guid: a81d8b5496af2fb48aa335a8f2b364f4, type: 3}
+--- !u!4 &1369126353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369126351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.13489, y: 0, z: 0.25088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 48968130}
+  - {fileID: 172072153}
+  - {fileID: 904354635}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1386246348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386246349}
+  - component: {fileID: 1386246350}
+  m_Layer: 0
+  m_Name: Circle_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1386246349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386246348}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 904354635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1386246350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386246348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!1 &1422523379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422523380}
+  - component: {fileID: 1422523381}
+  m_Layer: 0
+  m_Name: Donut_1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1422523380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422523379}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.50311, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 172072153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1422523381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422523379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 4
+        outerRadius: 7
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1001 &1438006737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1642,18 +5474,6 @@ PrefabInstance:
     - target: {fileID: 3108729894751582116, guid: 8d9b92f239e2f8f40aa16953670c1d26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088410884352815158, guid: 8d9b92f239e2f8f40aa16953670c1d26, type: 3}
-      propertyPath: health
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088410884352815158, guid: 8d9b92f239e2f8f40aa16953670c1d26, type: 3}
-      propertyPath: dashDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088410884352815158, guid: 8d9b92f239e2f8f40aa16953670c1d26, type: 3}
-      propertyPath: dashParticleRearOffset.x
-      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7758507988320477731, guid: 8d9b92f239e2f8f40aa16953670c1d26, type: 3}
       propertyPath: m_Name
@@ -1938,6 +5758,222 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1721840192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721840193}
+  - component: {fileID: 1721840194}
+  m_Layer: 0
+  m_Name: Donut_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1721840193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721840192}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.50311, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 172072153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1721840194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721840192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 2
+        outerRadius: 4
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
+--- !u!1 &1807751179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807751180}
+  - component: {fileID: 1807751181}
+  m_Layer: 0
+  m_Name: Circle_0 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807751180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807751179}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.878098, z: -0, w: 0.47848082}
+  m_LocalPosition: {x: 1.17, y: 0, z: -2.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 122.828, z: 0}
+--- !u!114 &1807751181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807751179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &1827663123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,6 +6046,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827663123}
   m_CullTransparentMesh: 1
+--- !u!1 &1837248275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837248276}
+  - component: {fileID: 1837248277}
+  m_Layer: 0
+  m_Name: Circle_0 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837248276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837248275}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.97, y: 0, z: 1.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 762812644}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1837248277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837248275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 0.2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 1
+        width: 9
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 1
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 2
+      maxSecondaryValue: 9
+      stepCount: 3
+      timeBetweenSteps: 1
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &1841974331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,6 +6287,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841974331}
   m_CullTransparentMesh: 1
+--- !u!1 &1847346710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1847346711}
+  - component: {fileID: 1847346712}
+  m_Layer: 0
+  m_Name: Circle_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1847346711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847346710}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.50311, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 172072153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1847346712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847346710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &1887863665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +6603,114 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1924148857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924148858}
+  - component: {fileID: 1924148859}
+  m_Layer: 0
+  m_Name: Donut_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924148858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924148857}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.49689, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 48968130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924148859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924148857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 2
+        outerRadius: 4
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &1939174079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,6 +6832,114 @@ RectTransform:
   m_AnchoredPosition: {x: -787, y: -488}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1955716011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1955716012}
+  - component: {fileID: 1955716013}
+  m_Layer: 0
+  m_Name: Circle_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1955716012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955716011}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.49689, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 48968130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1955716013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955716011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 2
+    damage: 1
+    shape:
+      shapeType: 0
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 1
+        outerRadius: 3
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &1995387481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,6 +7054,114 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2123430731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123430732}
+  - component: {fileID: 2123430733}
+  m_Layer: 0
+  m_Name: Donut_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2123430732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123430731}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.49689, y: 0, z: -0.48643002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 48968130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2123430733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123430731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6f3f6d59976ee448a3b298103e062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TelegraphSpawnPoint
+  useTransformAsOrigin: 1
+  useTransformPosition: 1
+  spawnRequest:
+    origin: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    duration: 1
+    damage: 1
+    shape:
+      shapeType: 2
+      circle:
+        radius: 2
+      square:
+        sideLength: 3
+      donut:
+        innerRadius: 4
+        outerRadius: 7
+      line:
+        length: 5
+        width: 1
+      cone:
+        radius: 3
+        angle: 45
+    sizeChange:
+      mode: 0
+      sizeChangeSpeed: 1
+      maxPrimaryValue: 0
+      maxSecondaryValue: 0
+      stepCount: 3
+      timeBetweenSteps: 0.15
+      lastMomentDelay: 0.5
+    cascade:
+      cascades: 0
+      cascadeDelay: 1
+      cascadeCount: 3
+      useCascadeShape: 0
+      cascadeShape:
+        shapeType: 0
+        circle:
+          radius: 2
+        square:
+          sideLength: 3
+        donut:
+          innerRadius: 1
+          outerRadius: 3
+        line:
+          length: 5
+          width: 1
+        cone:
+          radius: 3
+          angle: 45
+      circleRadiusStep: 0
+      squareSideLengthStep: 0
+      donutInnerRadiusStep: 0
+      donutOuterRadiusStep: 0
+      lineLengthStep: 0
+      lineWidthStep: 0
+      coneRadiusStep: 0
+      coneAngleStep: 0
+  drawWhenSelectedOnly: 1
+  previewFirstCascade: 0
+  previewResizeResult: 1
+  previewColor: {r: 1, g: 0.2, b: 0.2, a: 1}
+  cascadePreviewColor: {r: 1, g: 0.8, b: 0.2, a: 1}
+  resizePreviewColor: {r: 0.2, g: 0.9, b: 1, a: 1}
 --- !u!1 &2137086928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,3 +7298,6 @@ SceneRoots:
   - {fileID: 1995387482}
   - {fileID: 911316554}
   - {fileID: 890603935}
+  - {fileID: 1369126353}
+  - {fileID: 321040134}
+  - {fileID: 895475345}
