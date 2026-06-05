@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [SerializeField] private TMPro.TextMeshProUGUI debugTimerText; // Assign in inspector
+    [SerializeField] private bool enableDebugTimer = false; // Toggle in inspector to show/hide timer text
     [SerializeField] private float GameTimer = 30f; // max game time
     private float currentTime;
     public bool isGameOver;
@@ -42,6 +44,10 @@ public class GameManager : MonoBehaviour
     {
         currentTime = GameTimer;
         isGameOver = false;
+        if (debugTimerText != null)
+        {
+            debugTimerText.gameObject.SetActive(enableDebugTimer);
+        }
     }
 
     void Update()
@@ -57,6 +63,15 @@ public class GameManager : MonoBehaviour
         {
             currentTime = 0f;
             GameOver();
+        }
+        updateDebugTimerText();
+    }
+
+    private void updateDebugTimerText()
+    {
+        if (debugTimerText != null)
+        {
+            debugTimerText.text = $"{currentTime:F2}s";
         }
     }
 
