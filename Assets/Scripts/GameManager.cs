@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float GameTimer = 30f; // max game time
     private float currentTime;
     public bool isGameOver;
-    public bool victoryAchieved;
+    public bool victoryAchieved = false;
 
     public void GameOver(bool playerDied = false)
     {

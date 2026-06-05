@@ -5,6 +5,7 @@ using System.Collections;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject VictoryPanel;
+    [SerializeField] private GameObject LoserPanel;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
     [SerializeField] private Image damageVignette;
     [SerializeField] private float damageVignetteFadeDuration = 0.4f;
@@ -34,6 +35,10 @@ public class UIManager : MonoBehaviour
         {
             ShowVictoryPanel();
         }
+        if (gameManager != null && gameManager.isGameOver && !gameManager.victoryAchieved)
+        {
+            ShowLoserPanel();
+        }
         if (playerController != null)
         {
             int playerHealth = playerController.GetHealth();
@@ -50,6 +55,14 @@ public class UIManager : MonoBehaviour
         if (VictoryPanel != null)
         {
             VictoryPanel.SetActive(true);
+        }
+    }
+
+    private void ShowLoserPanel()
+    {
+        if (LoserPanel != null)
+        {
+            LoserPanel.SetActive(true);
         }
     }
 
